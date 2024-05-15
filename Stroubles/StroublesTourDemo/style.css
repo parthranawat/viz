@@ -1,0 +1,661 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+#header {
+  flex: 0.5;
+  background: #222;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#hamburger {
+  display: flex;
+  margin-left: 3%;
+  align-items: center;
+}
+
+#hamburger > button {
+  height: 70%;
+  background: #222;
+}
+
+/* Style the button that is used to open the sidepanel */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 160px;
+}
+
+.sidebar a {
+  padding: 12px 8px 12px 42px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 60px;
+  margin-left: 50px;
+  color: #f1f1f1;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.Datapanel {
+  height: 550px; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 242;
+  left: 40;
+  /*background-color: rgba(224, 224, 224, 0.9); */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 10px from the top */
+  padding-left: 4px;
+  transition: 1s; /* 1 second transition effect to slide in the sidepanel */
+}
+
+/* Position and style the close button (top L corner) */
+.Datapanel .closebtn {
+  position: absolute;
+  top: 0px;
+  left: 18px;
+  font-size: 33px;
+  color: black;
+  margin-left: 10px;
+  background-color: white;
+  padding: 2px;
+  padding-top: 1px;
+  margin-top: 5px;
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -320px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 20%;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  z-index: 10;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#spherC {
+  top: 120px;
+  background-color: #222;
+}
+
+#spherS {
+  top: 180px;
+  background-color: #222;
+}
+
+#spherW {
+  top: 240px;
+  background-color: #222;
+}
+
+#spherN {
+  top: 300px;
+  background-color: #222;
+}
+
+#spherE {
+  top: 360px;
+  background-color: #222;
+}
+
+#spherR {
+  top: 420px;
+  background-color: #222;
+}
+
+#spherRN {
+  top: 480px;
+  background-color: #222;
+}
+
+#title {
+  flex: 2.8;
+  /* margin-left: 12%; */
+}
+
+#title > h1 {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 20px 0px;
+  padding: 0px;
+}
+
+#buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* #btn-mobile,
+#btn-map {
+  margin: 5px;
+}
+
+.btn-mobile {
+  margin: 5px;
+}
+
+#btn-gallery {
+  margin: 5px 10px 5px 5px;
+} */
+
+.btn-header {
+  padding: 5px;
+  border-radius: 10px;
+  margin: 2% 8%;
+  border: none;
+}
+
+/* #buttons > button:nth-child(3) {
+  margin-right: 5%;
+} */
+.btn-header a {
+  color: #111;
+  text-decoration: none;
+  font-size: 120%;
+  font-weight: 700;
+}
+
+button {
+  width: 40%;
+  height: 50%;
+  cursor: pointer;
+}
+
+#main {
+  flex: 3;
+  background: rgb(197, 194, 194);
+  display: flex;
+  flex-direction: row;
+}
+
+#hamburger-hide {
+  flex: 0.8;
+}
+
+#x3d-div {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+#x3dom-container {
+  flex: 5;
+  padding: 15px 20px;
+  position: relative;
+}
+
+#x3dElement {
+  height: 90vh;
+  display: flex;
+}
+
+#play {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border-radius: 8px;
+  /* height: 68px; */
+  font-size: 30px;
+}
+
+#play:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#map-and-gallery {
+  flex: 3;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#map {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 3% 2%;
+}
+
+.map-container iframe {
+  border: 1px solid #222;
+  border-radius: 8px;
+  width: 100%;
+}
+
+#gallery {
+  display: flex;
+  flex: 1;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  width: 98%;
+  /* display: flex; */
+  justify-content: center;
+  margin: 3% 2%;
+}
+
+#footer {
+  /* flex: 0.5; */
+  background: #222;
+  display: flex;
+  flex-direction: row;
+}
+
+#vt-logo {
+  margin: 29px 25px;
+}
+
+/* #usefullinks {
+  flex: 1;
+  color: whitesmoke;
+  align-items: center;
+  margin: 10px 0;
+} */
+
+#links {
+  flex: 1;
+  gap: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2% 4%;
+}
+
+.linkspadding {
+  margin: 0 0.5% 0 0.5%;
+  width: 11%;
+}
+
+/* Gallery */
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  /* width: 100%; */
+  display: none;
+  position: relative;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 1%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 1%;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover,
+  .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  } */
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 1%;
+  left: 45%;
+  font-size: 20px;
+}
+
+.mySlides > img {
+  border-radius: 8px;
+  width: 100%;
+  height: 480px;
+}
+
+.zoom {
+  position: absolute;
+  right: 0%;
+  bottom: 1%;
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 8px 12px;
+}
+
+.zoomlink {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+
+.caption-container p {
+  margin: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.column > img {
+  max-height: 155px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.btn-links {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  border: none;
+}
+
+.btn-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+#datapoints {
+  display: none;
+}
+
+#credits {
+  display: flex;
+  align-items: center;
+  margin: 2.5% 20%;
+  background-color: white;
+  padding: 2%;
+  border-radius: 10px;
+  width: 100%;
+  flex-direction: column;
+}
+
+#credits > h3 {
+  margin-bottom: 0%;
+}
+
+.column {
+  /* float: left; */
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.card > img {
+  height: 250px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+.credits-row {
+  display: flex;
+  justify-content: center;
+  width: 68%;
+}
+.container::after,
+.credits-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.person-name {
+  margin-bottom: 2%;
+}
+
+.degree {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.students {
+  font-size: 20px;
+}
+
+.image1 {
+  margin-right: 3%;
+}
+
+.image2 {
+  margin-left: 3%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #header {
+    flex: 0;
+  }
+
+  #credits {
+    width: 100%;
+    margin: 2.5% 12%;
+  }
+
+  .credits-row {
+    width: 84%;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  #title > h1 {
+    font-size: 120%;
+    justify-content: center;
+  }
+  #buttons {
+    flex: 1.2;
+  }
+  .btn-header {
+    width: 100%;
+    margin: 2% 10%;
+  }
+  .btn-header a {
+    font-size: 90%;
+  }
+  .linkspadding {
+    margin: 0% 2%;
+    width: auto;
+  }
+
+  .btn-links {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 5px;
+    margin: 3px;
+    border: none;
+  }
+  .btn-links a {
+    color: #111;
+    text-decoration: none;
+    font-size: 106%;
+    font-weight: 700;
+  }
+  .open {
+    display: none;
+  }
+  #map-and-gallery {
+    flex-direction: column;
+  }
+
+  #links {
+    margin: 4%;
+  }
+
+  #credits {
+    margin: 8%;
+  }
+
+  .credits-row {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .image1 {
+    margin-right: 0;
+  }
+
+  .image2 {
+    margin-left: 0;
+  }
+
+  .students {
+    font-size: 15px;
+    padding: 0px 17%;
+  }
+}

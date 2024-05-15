@@ -1,0 +1,22 @@
+.plots-submenu {
+  position: absolute;
+  top: 8%;
+  list-style: none;
+  z-index: 1;
+  background: #e2b842;
+}
+
+.submenu-item {
+  display: block;
+  text-decoration: none;
+  text-align: start;
+  color: black !important;
+  padding: 4% 10% !important;
+  font-weight: 700;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.submenu-item:hover {
+  background: #e2c77b !important;
+}

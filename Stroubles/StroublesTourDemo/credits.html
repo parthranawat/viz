@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/dev/x3dom.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="./x3dom/x3dom.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="shortcut icon" href="#" />
+  <script type="text/javascript" src="https://x3dom.org/download/dev/x3dom.js"></script>
+  <!-- <script type="text/javascript" src="./x3dom/x3dom.js"></script> -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <title>Stroubles demo Tour</title>
+
+  <!-- Hamburger open close function -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header">
+    <div id="hamburger">
+      <button class="openbtn" onclick="openNav()">
+        <i class="fa-solid fa-bars fa-xl" style="color: whitesmoke"></i>
+      </button>
+    </div>
+    <div id="title">
+      <h1>Stroubles Tour</h1>
+    </div>
+  </div>
+
+  <!-- Main body start -->
+  <div id="main">
+    <!-- Sidebar start-->
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html" id="spherC" onclick="shapeSwitch(0,'index.html')">Triple Point</a>
+      <a href="spout.html" id="spherS" onclick="shapeSwitch(1,'spout.html')">Spout Spring</a>
+      <a href="spoutng.html" id="spherW" onclick="shapeSwitch(2,'spoutng.html')">Spout Spring
+        <span>&nbsp;&emsp14;</span>(no narration)</a>
+      <a href="owens.html" id="spherN" onclick="shapeSwitch(3,'owens.html')">Owens Spring</a>
+      <a href="owensng.html" id="spherE" onclick="shapeSwitch(4,'owensng.html')">Owens Spring <span>&nbsp; &nbsp;</span>
+        (no narration)</a>
+      <a href="robinson.html" id="spherR" onclick="shapeSwitch(5,'robinson.html')">Robinson Spring</a>
+      <a href="robinsonng.html" id="spherRN" onclick="shapeSwitch(6,'robinsonng.html')">Robinson Spring (no
+        narration)</a>
+    </div>
+    <!-- Sidebar end -->
+
+    <div id="credits">
+      <h2 style="text-align: center">Our Team</h2>
+      <div class="credits-row">
+        <div class="column image1">
+          <div class="card">
+            <img
+              src="https://fralinlifesci.vt.edu/content/fralinlifesci_vt_edu/en/Faculty/NicholasPolys/jcr:content/bio-image.transform/xl-medium/image.jpg"
+              alt="Jane" style="width: 100%" />
+            <div class="container">
+              <h3 class="person-name">Nicholas F. Polys</h3>
+              <h4 class="degree">PhD</h4>
+              <p class="title">Director of Visualization</p>
+              <a href="mailto:npolys@vt.edu">npolys@vt.edu</a>
+              <p>
+                <a href="https://arc.vt.edu/about/our-team/nicholas-polys.html" target="_blank">
+                  <button class="button">About</button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column image2">
+          <div class="card">
+            <img
+              src="https://globalchange.vt.edu/content/globalchange_vt_edu/en/faculty/affiliated/hession-cully/_jcr_content/content/adaptiveimage_129448.img.jpg/1654532557748.jpg"
+              alt="Mike" style="width: 100%" />
+            <div class="container">
+              <h3 class="person-name">Cully Hession</h3>
+              <h4 class="degree">PhD, PE, CED</h4>
+              <p class="title">Graduate Program Director</p>
+              <a href="mailto:chession@vt.edu">chession@vt.edu</a>
+              <p>
+                <a href="https://www.bse.vt.edu/people/faculty/cully-hession.html" target="_blank">
+                  <button class="button">About</button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 style="text-align: center">Students</h3>
+      <ul class="students">
+        <li>Annie Dubner, MS, Biological Systems Engineering</li>
+        <li>Parth Ranawat, MEng, Computer Science</li>
+        <li>Riddhi Thanki, MEng, Computer Science</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Main body end -->
+
+  <!-- Footer start -->
+  <div id="footer">
+    <!-- <div id="vt-logo">
+			<img src="Horizontal_VT_Full_Color_RGB.png" width="200px" />
+		</div> -->
+    <div id="links">
+      <div class="linkspadding">
+        <button class="btn-links">
+          <a href="https://vtstreamlab.weebly.com/live-data.html " target="_blank">Live Data</a>
+        </button>
+      </div>
+      <div class="linkspadding">
+        <button class="btn-links">
+          <a href="https://earth.google.com/web/@37.24092548,-80.46499556,603.28376228a,23498.81789472d,30y,0h,0t,0r/data=MicKJQojCiExOHdReVd3NHM0OVBKNmRad3N3Sk90cjduOExPYmhrbkk"
+            target="_blank">GE Tour</a>
+        </button>
+      </div>
+      <div class="linkspadding">
+        <button class="btn-links">
+          <a href="https://virginiatech.maps.arcgis.com/apps/MapTour/index.html?appid=be623b31d4df4d2fbcfafa3fc8ec8c1b "
+            target="_blank">BMP Tour</a>
+        </button>
+      </div>
+      <div class="linkspadding">
+        <button class="btn-links">
+          <a href="https://ashleyvn.github.io/HCI-Design/ " target="_blank">InfoVis Site</a>
+        </button>
+      </div>
+      <div class="linkspadding">
+        <button class="btn-links">
+          <a href="credits.html" target="_blank">Our Team</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Footer end -->
+</body>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let zoom = document.getElementsByClassName("zoom");
+    // let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    if (n > zoom.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < zoom.length; i++) {
+      zoom[i].style.display = "none";
+    }
+
+    // for (i = 0; i < dots.length; i++) {
+    // 	dots[i].className = dots[i].className.replace("active", "");
+    // }
+
+    slides[slideIndex - 1].style.display = "block";
+    zoom[slideIndex - 1].style.display = "block";
+    // dots[slideIndex - 1].classList.add("active");
+    // captionText.innerHTML = dots[slideIndex - 1].alt;
+  }
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+.x3dom-table-div {
+  position: relative;
+}
+
+#x3dElement {
+  display: flex;
+  height: 90vh;
+  margin: 1rem;
+}

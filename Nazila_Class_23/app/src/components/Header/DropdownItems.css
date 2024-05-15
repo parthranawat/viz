@@ -1,0 +1,33 @@
+.plots-submenu {
+  position: absolute;
+  top: 8%;
+  list-style: none;
+  z-index: 1;
+  background: #e2b842;
+  padding: 0.5% 1.5%;
+}
+
+.submenu-item {
+  display: block;
+  text-decoration: none;
+  text-align: start;
+  color: black !important;
+  padding: 5% 3% !important;
+  font-weight: 700;
+  cursor: pointer;
+  width: 8rem;
+}
+
+.submenu-item:hover {
+  background: #e2c77b !important;
+}
+
+@media only screen and (max-width: 990px) and (orientation: landscape) {
+  .plots-submenu {
+    top: 12%;
+  }
+
+  .submenu-item {
+    font-size: 90%;
+  }
+}

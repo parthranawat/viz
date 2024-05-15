@@ -1,0 +1,37 @@
+.image {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.points {
+  position: absolute;
+  width: 5%;
+  height: 6%;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 0;
+  border: none;
+  background-color: transparent;
+}
+.point1 {
+  top: 11%;
+  right: 51%;
+}
+
+.point2 {
+  top: 17%;
+  right: 54%;
+}
+
+.point3 {
+  top: 68%;
+  right: 57%;
+}
+
+.point4 {
+  top: 63%;
+  right: 52%;
+}
